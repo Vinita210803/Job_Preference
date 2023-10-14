@@ -1,0 +1,6 @@
+.services {
+    display: grid;
+    margin-top: 2rem;
+    place-items: center;
+    grid-template-columns: auto auto auto;
+}

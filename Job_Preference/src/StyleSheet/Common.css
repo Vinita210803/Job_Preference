@@ -1,0 +1,42 @@
+.right {
+    width: 100vh;
+    background-color: transparent;
+    height: 100vh;
+}
+section#main {
+    display: flex;
+    margin: 0px 10vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1.main-heading {
+    font-size: 3rem;
+    width: 80%;
+    font-family: emoji;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+background-image: url("../Assets/home.png");
+}
+h4.sub_heading {
+    font-size: 1rem;
+    font-family: emoji;
+    color: #404040;
+}
+button {
+    background-color: white;
+    color: red;
+    border: 3px double #d20000;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.img {
+    width: 80vh;
+    height: 80vh;
+    margin-top: 2rem;
+    background-size: cover;
+} 

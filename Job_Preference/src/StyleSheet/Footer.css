@@ -1,0 +1,10 @@
+p.f {
+    margin: 0;
+    font-family: math;
+    color: #636363;
+    padding: 20px;
+}
+footer {
+    box-shadow: 4px 4px 100px #e1e1e1;
+    text-align: center;
+}
