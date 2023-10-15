@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 
 module.exports.auth = async function (req, res, next) {
   try {
-    const token = req.headers.authorization?.split(' ')[1];
+    const token = req.headers.authorization?.split(" ")[1];
     if (!token) {
       return res.status(401).json({ message: "No token provided" });
     }
@@ -24,4 +24,4 @@ module.exports.auth = async function (req, res, next) {
     console.log(error);
     return res.status(500).json({ message: "Server error" });
   }
-}
+};

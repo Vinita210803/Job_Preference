@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const userSchema=new mongoose.Schema({
     name:{
         type:String,
-        required:true
     },
     password:{
         type:String,
@@ -13,5 +12,20 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true,
         unique:true
+    },
+    verificationCode:{
+        type:String,
+     },
+     link:{
+        type:String
+    },
+    isVerified:{
+        type:Boolean,
     }
 })
+
+
+const User=mongoose.model('User',userSchema);
+
+
+module.exports=User;
