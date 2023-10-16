@@ -10,8 +10,8 @@ const Navbar=()=>{
  <NavLink to="/">
 
      <h2 className='logo-color'>
-     <span>V</span>aibhav
-     <span>P</span>andey
+     <span>J</span>ob
+     <span>F</span>inder
      </h2>
  </NavLink>
  </div>

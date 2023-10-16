@@ -16,10 +16,6 @@
     align-items: center;
     justify-content: space-around;
 }
-
-
-
-
 .userbox{
     width: 40%;
     height: 50%;
@@ -28,11 +24,15 @@
     margin: 0 auto;
     background-color: aliceblue;
 }
-button{
+.userbox button{
+    color:white;
+    font-weight: bold;
     display: table;
     margin: 0 auto;
 }
-.title{
+.userbox .title{
+    padding-top: 5%;
+    padding-left:8%;
     display: table;
     margin:  auto;
     font-size: 5vh;

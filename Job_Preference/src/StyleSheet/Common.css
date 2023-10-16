@@ -28,10 +28,12 @@ h4.sub_heading {
     color: #404040;
 }
 button {
-    background-color: white;
+    /* background-color: white; */
+    background-color: rgb(115, 194, 239);
+    color:white;
     color: red;
-    border: 3px double #d20000;
-    border-radius: 5px;
+    border: 3px solid white;
+    padding:10px;
     margin-top: 10px;
 }
 .img {
