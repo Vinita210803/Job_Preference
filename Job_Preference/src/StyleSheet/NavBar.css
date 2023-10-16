@@ -1,3 +1,7 @@
+li{
+    list-style: none;
+    text-decoration: none;
+}
 nav.main_nav {
     display: flex;
     justify-content: space-between;
@@ -15,6 +19,12 @@ a {
     color: black;
     text-transform: uppercase;
 }
+#loginsingup{
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    background-color: #ff0000;
+}
 ul.menu-link-itms {
     display: flex;
     margin-bottom: 0;
@@ -22,6 +32,9 @@ ul.menu-link-itms {
 }
 li.menu-item {
     margin: 2rem;
+}
+.rightnav-item{
+    margin: .5rem;
 }
 ul.social_media-dexktop {
     list-style: none;
@@ -31,8 +44,10 @@ ul.social_media-dexktop {
 li.social-itme {
     margin: 1rem;
 }
-.menu-link {
-    margin-left: auto;
+.rightnav{
+    display: flex;
+    align-items: end;
+    justify-content: center;
 }
 a.active {
     font-weight: 500;

@@ -23,9 +23,11 @@ const Navbar=()=>{
          <li className='menu-item'><NavLink activeClassName="menu_activ" to="/about">About</NavLink></li>
          <li className='menu-item'><NavLink activeClassName="menu_activ" to="/service">Services</NavLink></li>
          <li className='menu-item'><NavLink activeClassName="menu_activ" to="/contact">Contact</NavLink></li>
-         <li className='menu-item'><NavLink activeClassName="menu_activ" to="/login">Log In</NavLink></li>
-         <li className='menu-item'><NavLink activeClassName="menu_activ" to="/singup">Sing Up</NavLink></li>
      </ul>
+ </div>
+ <div className='rightnav'>
+         <li   className='rightnav-item'><NavLink id="loginsingup" activeClassName="menu_activ" to="/login">Log In</NavLink></li>
+         <li   className='rightnav-item'><NavLink id="loginsingup" activeClassName="menu_activ" to="/singup">Sing Up</NavLink></li>
  </div>
  
     </nav>

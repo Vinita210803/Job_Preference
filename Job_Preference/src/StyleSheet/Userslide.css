@@ -1,0 +1,39 @@
+#usermain {
+       margin: 0px 10vh;
+     border-top: 1px solid gray;
+     padding-top: 10vh;
+       height: 80vh;
+       
+}
+.userheading{
+    width: 100%;
+     text-align: center;
+}
+.innermain {
+    height: 70%;
+    display: flex;
+    margin: 0px 10vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+.userbox{
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    display: table;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+button{
+    display: table;
+    margin: 0 auto;
+}
+.title{
+    display: table;
+    margin:  auto;
+    font-size: 5vh;
+}
