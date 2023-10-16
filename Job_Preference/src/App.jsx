@@ -8,8 +8,9 @@ import Service from './Componentes/Service';
 import Contact from './Componentes/Contact';
 import Navbar from './Componentes/Navbar';
 import User from './Componentes/User.jsx';
-import Footer from "./Componentes/Footer"
-import Imagegenrator from "./Componentes/Imagegenrator"
+import Footer from "./Componentes/Footer";
+import Singup from "./Componentes/Singup.jsx";
+import Login from "./Componentes/Login.jsx";
 import {Route, Navigate,Routes} from "react-router-dom";
 const App=()=>{
   return(
@@ -20,8 +21,9 @@ const App=()=>{
     <Route exact path = "/about" Component={About}/>
     <Route exact path = "/service" Component={Service}/>
     <Route exact path = "/contact" Component={Contact}/>
+    <Route exact path = "/login" Component={Login}/>
+    <Route exact path = "/singup" Component={Singup}/>
     <Route exact path = "/user/:fname" Component={User}/>
-    <Route exact path = "/service/imagegenrator" Component={Imagegenrator}/>
 
 <Route path="/" element={<Navigate replace to="/" />} />
     </Routes>
