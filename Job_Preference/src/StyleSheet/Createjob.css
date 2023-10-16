@@ -1,0 +1,23 @@
+.createjobmain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10vh;
+}
+form {
+    width: 50%;
+    margin: 0;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+     
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.map{
+    width: 40%;
+    height: 50vh;
+    /* background-image: url("../Assets/map.webp"); */
+
+    background-color: rgb(122, 122, 122);
+}

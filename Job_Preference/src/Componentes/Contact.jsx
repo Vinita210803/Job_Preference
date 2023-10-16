@@ -22,7 +22,7 @@ alert( ` My name is ${data.fullname}, phone no is ${data.phone}, my email is ${d
  
   return (
     <>
-      <form onSubmit={fromSubmit}>
+      <form onSubmit={fromSubmit} className='contactform'>
         <div  className="form-group">
           <label for="text">Full Name</label>
           <input  type="text" className="form-control" id="exampleFormControlTextarea1" required name='fullname'
