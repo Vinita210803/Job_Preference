@@ -21,6 +21,9 @@ const userSchema=new mongoose.Schema({
     },
     isVerified:{
         type:Boolean,
+    },
+    mode:{
+        type:String
     }
 })
 
