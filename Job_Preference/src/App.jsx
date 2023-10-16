@@ -12,6 +12,7 @@ import Footer from "./Componentes/Footer";
 import Singup from "./Componentes/Singup.jsx";
 import Login from "./Componentes/Login.jsx";
 import {Route, Navigate,Routes} from "react-router-dom";
+import Register from './Componentes/Register';
 const App=()=>{
   return(
     <>
@@ -22,12 +23,12 @@ const App=()=>{
     <Route exact path = "/service" Component={Service}/>
     <Route exact path = "/contact" Component={Contact}/>
     <Route exact path = "/login" Component={Login}/>
-    <Route exact path = "/singup" Component={Singup}/>
+    <Route exact path = "/singup" Component={Register}/>
     <Route exact path = "/user/:fname" Component={User}/>
 
 <Route path="/" element={<Navigate replace to="/" />} />
     </Routes>
-<Footer></Footer>
+{/* <Footer></Footer> */}
     </>
   )
 }

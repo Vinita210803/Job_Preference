@@ -9,7 +9,7 @@ app.use(express.json())
 
 app.use('/', require('./route'));
 
-//app.use('/', require('./routes')); 
+// app.use('/', require('./routes')); 
 
 app.listen(port, function(err){
     if (err){
