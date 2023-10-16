@@ -13,6 +13,7 @@ import Singup from "./Componentes/Singup.jsx";
 import Login from "./Componentes/Login.jsx";
 import {Route, Navigate,Routes} from "react-router-dom";
 import Register from './Componentes/Register';
+import Createjob from './Componentes/Createjob';
 const App=()=>{
   return(
     <>
@@ -25,6 +26,9 @@ const App=()=>{
     <Route exact path = "/login" Component={Login}/>
     <Route exact path = "/singup" Component={Register}/>
     <Route exact path = "/user/:fname" Component={User}/>
+    
+    
+    <Route exact path = "/createjob" Component={Createjob}/>
 
 <Route path="/" element={<Navigate replace to="/" />} />
     </Routes>

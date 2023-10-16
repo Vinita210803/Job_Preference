@@ -1,5 +1,6 @@
 import React from 'react'
 import "../StyleSheet/Userslide.css"
+import { NavLink } from 'react-router-dom';
 const Userslide = () => {
     return (
         <>
@@ -12,14 +13,15 @@ const Userslide = () => {
 
               
                     <div className="userbox">
-                        <p className='title'>Create  a Job </p>
-                        <button>CREATE</button>
+                        <p className='title'>Create a Job </p>
+                       <NavLink id="loginsingup" activeClassName="menu_activ" to="/createjob">Create</NavLink>
                     </div>
             
               
                     <div className="userbox">
-                        <p className='title'>Get a Job </p>
-                        <button>GET</button>
+                        <p className='title'>Get 
+                        a Job </p>
+                        <NavLink id="loginsingup" activeClassName="menu_activ" to="/createjob">Get</NavLink>
                     </div>
                
                 </div>
