@@ -7,8 +7,8 @@ const Common=(props)=>{
     <>
     <section id='main'>
       <div className='left'>
-        <h1 className='main-heading'>{props.name} <span style={{color:"#0000cc"}}>V-Web</span></h1>
-        <h4 className='sub_heading'>We are team of talanted devloper making websites</h4>
+        <h1 className='main-heading'>{props.name} <span style={{color:"#0000cc"}}>Job-Junction</span></h1>
+        <h4 className='sub_heading'>Hear you are find job and worker so "Let's go to WORK"!!!</h4>
         <button >
         <NavLink to={props.visit}>
         {props.btname}

@@ -6,22 +6,24 @@ const Userslide = () => {
         <>
             <section id='usermain'>
                 <div className='userheading'>
-                    <h1>JobArea                    </h1>
-                    <h3>Choose your prafarance for your bussiness and work</h3>
+                    <h1>Job-Junction</h1>
+                    <h3 style={{paddingTop:"5rem", fontWeight: "100"}}>Choose your prafarance for your bussiness and work</h3>
                 </div>
+
+
                 <div className="innermain">
 
               
                     <div className="userbox">
                         <p className='title'>Create a Job </p>
-                       <NavLink id="loginsingup" activeClassName="menu_activ" to="/createjob">Create</NavLink>
+                       <NavLink id="loginsingupbtn" activeClassName="menu_activ" to="/createjob">Create</NavLink>
                     </div>
             
               
                     <div className="userbox">
                         <p className='title'>Get 
                         a Job </p>
-                        <NavLink id="loginsingup" activeClassName="menu_activ" to="/createjob">Get</NavLink>
+                        <NavLink id="loginsingupbtn" activeClassName="menu_activ" to="/createjob">Get</NavLink>
                     </div>
                
                 </div>

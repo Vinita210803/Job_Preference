@@ -11,7 +11,7 @@ const Navbar=()=>{
 
      <h2 className='logo-color'>
      <span>J</span>ob
-     <span>F</span>inder
+     <span>J</span>unction
      </h2>
  </NavLink>
  </div>
