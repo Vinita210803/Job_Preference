@@ -15,13 +15,14 @@ function Register() {
 
 
 async function userSignup(e) {
-
+    e.preventDefault();
   try {
     
     const res=await axios.post('http://localhost:8000/register',{
      name,
-     password,
      email,
+     password,
+     
      confirmPassword
     })
   console.log(res.data)
@@ -60,6 +61,7 @@ async function userSignup(e) {
                     id="name"
                     autoComplete="off"
                     placeholder="Your Name"
+                    onChange={(e)=>setName(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -72,6 +74,7 @@ async function userSignup(e) {
                     id="email"
                     autoComplete="off"
                     placeholder="Your email"
+                    onChange={(e)=>setEmail(e.target.value)}
                   />
                 </div>
                
@@ -86,6 +89,7 @@ async function userSignup(e) {
                     id="password"
                     autoComplete="off"
                     placeholder="Your password"
+                    onChange={(e)=>setPassword(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -98,6 +102,8 @@ async function userSignup(e) {
                     id="password"
                     autoComplete="off"
                     placeholder="Confirm  Your password"
+
+                    onChange={(e)=>setConfirmPassword(e.target.value)}
                   />
                 </div>
                 <div className="form-group from-button">

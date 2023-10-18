@@ -22,7 +22,7 @@ const Reset = () => {
                             <button className='googlesing'>
                                <div className="googleimg">
                                </div>
-                               <NavLink to="reset_password/:id/:token" style={{fontSize:"20px", fontFamily:"Poppins, sans-serif", padding:"0px", margin:"0px", color:"gray"}}>Contineu</NavLink>
+                               <NavLink to="/reset_password/:id/:token" style={{fontSize:"20px", fontFamily:"Poppins, sans-serif", padding:"0px", margin:"0px", color:"gray"}}>Contineu</NavLink>
                                
                                 </button>
                           
