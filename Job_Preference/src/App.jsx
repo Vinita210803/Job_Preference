@@ -6,7 +6,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import Contact from './Componentes/Contact';
 import Navbar from './Componentes/Navbar';
 import User from './Componentes/User.jsx';
-import Footer from "./Componentes/Footer";
+// import Footer from "./Componentes/Footer";
 // import Register from "./Componentes/Register.jsx";
 import Info from './Componentes/Info';
 import Pay from './Componentes/Pay';

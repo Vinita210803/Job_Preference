@@ -1,10 +1,9 @@
 import React from "react";
-import { Redirect } from "react-router";
+
 import signupic from "../Assets/signup.svg";
-import axios from "axios";
-import {Routes, Route, useNavigate} from 'react-router-dom';
+
+import {useNavigate} from 'react-router-dom';
 import "../main.css";
-import Verification from "./Verification";
 function Register() {
   
   const navigate = useNavigate();

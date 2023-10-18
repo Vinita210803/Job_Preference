@@ -1,4 +1,4 @@
-import React, { Component, ReactDOM } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import "../StyleSheet/Verification.css"
 class Verification extends React.Component {
