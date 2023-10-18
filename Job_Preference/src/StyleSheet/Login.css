@@ -60,6 +60,25 @@
             font-size: 20px;
             font-family:'Times New Roman', Times, serif;
             color: #118aef;
+          
         }
     }
+}
+.googlesing{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid gray ;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.googleimg{
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-image: url("../Assets//google.png");
 }

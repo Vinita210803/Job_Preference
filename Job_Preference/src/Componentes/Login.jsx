@@ -14,7 +14,7 @@ function Login() {
                                     </figure>
                                 </div>
                     <div className="signup-form">
-                        <h1 className="form-title">Sign In</h1>
+                        <h1 className="form-title">LogIn</h1>
                             <form className="register-form" id="register-form">
                            
                             <div className="form-group">
@@ -30,13 +30,24 @@ function Login() {
                                 </label>
                             <input type="password" name="password" id="password" autoComplete="off" placeholder ="Your password" />
                             </div>
+                            <div className="form-group">
+                                <i style={{margin:"0", padding:"10px" , color:"#6dabe4"}}>Forgot password?</i>
+                            </div>
                            
                             <div className="form-group from-button">
                                <input type="submit" name="signin" id="signin" className="form-submit" 
-                               value="Log In" onClick={userSignin}>
+                               value="Log In" style={{width:"100%" , padding:"10px"}} onClick={userSignin}>
                                </input>
 
                            </div>
+                           <div className="form-group">
+                                <button className='googlesing'>
+                               <div className="googleimg">
+                               </div>
+                               <p style={{fontSize:"20px", fontFamily:"Poppins, sans-serif", padding:"0px", margin:"0px", color:"gray"}}>Login with Google</p>
+                               
+                                </button>
+                            </div>
 
                             </form>
                             </div>

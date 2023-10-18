@@ -1,13 +1,13 @@
 import React from 'react';
 import Common from './Common';
-import Userslide from './Userslide';
+
 
 // home page
 const Home=()=>{
   return(
     <>
-   <Common name="Grow Your Bussines With " visit="/service" btname="Get Started"></Common>
-   <Userslide/>
+   <Common name="Hear you are show And pay Goverment Tarnstions to ferms!!!" firstvisit="/info" firstbtname="Get Info" secondvisit="/pay" secondbtname="Pay"></Common>
+
     </>
   )
 }
