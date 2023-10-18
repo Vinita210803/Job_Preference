@@ -27,7 +27,7 @@ const Navbar=()=>{
  </div>
  <div className='rightnav'>
          <li   className='rightnav-item'><NavLink id="loginsingup" activeClassName="menu_activ" to="/login">Log In</NavLink></li>
-         <li   className='rightnav-item'><NavLink id="loginsingup" activeClassName="menu_activ" to="/singup">Sing Up</NavLink></li>
+         <li   className='rightnav-item'><NavLink id="loginsingup" activeClassName="menu_activ" to="/singup">Sign Up</NavLink></li>
  </div>
  
     </nav>

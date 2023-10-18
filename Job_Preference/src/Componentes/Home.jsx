@@ -6,7 +6,7 @@ import Common from './Common';
 const Home=()=>{
   return(
     <>
-   <Common name="Hear you are show And pay Goverment Tarnstions to ferms!!!" firstvisit="/info" firstbtname="Get Info" secondvisit="/pay" secondbtname="Pay"></Common>
+   <Common name="Here connect with Government for Transaction in ferms!!!" firstvisit="/info" firstbtname="Get Info" secondvisit="/pay" secondbtname="Pay"></Common>
 
     </>
   )
