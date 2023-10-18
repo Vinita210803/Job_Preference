@@ -1,35 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
 import signupic from "../Assets/signup.svg";
 
 import {useNavigate} from 'react-router-dom';
 import "../main.css";
+import axios from "axios";
+import { toast } from "react-toastify";
 function Register() {
-  
+  const [name,setName]=useState('');
+  const [password,setPassword]=useState('');
+  const [email,setEmail]=useState('');
+  const [confirmPassword,setConfirmPassword]=useState('');
   const navigate = useNavigate();
-function userSignup(e) {
-  navigate('/singup/verification');
-  // e.preventDefault();
-  // console.log("jhuhhb");
-  // // --|e|.|preventDefault();
-  // let data = {
-  //   name: document.getElementById("name").value,
-  //   email: document.getElementById("email").value,
-  //   phone: document.getElementById("phone").value,
-  //   work: document.getElementById("work").value,
-  //   password: "pswd",
-  //   cpassword: "pswd",
-  // };
-  // console.log(data);
-  // axios
-  //   .post("http://localhost:3006/register", data)
-  //   .then((res) => {
-  //     alert("User register successful");
-  //     // return <Redirect to='/Login'/>;
-  //   })
-  //   .catch((err) => {
-  //     alert("some error");
-  //   });
+
+
+async function userSignup(e) {
+
+  try {
+    
+    const res=await axios.post('http://localhost:8000/register',{
+     name,
+     password,
+     email,
+     confirmPassword
+    })
+  console.log(res.data)
+    if(res.data.status===true){
+      toast.success(res.data.message);
+      navigate('/singup/verification',{
+        state:{
+          email:email
+        }
+      });
+    }else{
+      toast.error(res.data.message)
+    }
+  } catch (error) {
+    toast.error("error")
+  }
+  
 }
 
 

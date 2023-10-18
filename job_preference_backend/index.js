@@ -7,6 +7,7 @@ app.use(cors());
 app.use(express.urlencoded());
 app.use(express.json())
 
+
 app.use('/', require('./route'));
 
 // app.use('/', require('./routes')); 

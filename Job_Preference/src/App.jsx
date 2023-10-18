@@ -14,9 +14,14 @@ import Login from './Componentes/Login';
 import Verification from './Componentes/Verification';
 import {Route, Navigate,Routes} from "react-router-dom";
 import Register from './Componentes/Register';
+import { ToastContainer } from 'react-toastify';
+
 const App=()=>{
+   
+
   return(
     <>
+    <ToastContainer />
     <Navbar/>
     <Routes>
     <Route  exact path = "/" Component={Home}/>
