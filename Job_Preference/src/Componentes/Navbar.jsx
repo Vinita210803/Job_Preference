@@ -20,8 +20,8 @@ const Navbar=()=>{
  <div className='menu-link'>
      <ul className='menu-link-itms'>
          <li className='menu-item'><NavLink activeClassName="menu_activ" exact to="/">Home</NavLink></li>
-         <li className='menu-item'><NavLink activeClassName="menu_activ" to="/pay">Pay</NavLink></li>
          <li className='menu-item'><NavLink activeClassName="menu_activ" to="/info">Info</NavLink></li>
+         <li className='menu-item'><NavLink activeClassName="menu_activ" to="/pay">Pay</NavLink></li>
          <li className='menu-item'><NavLink activeClassName="menu_activ" to="/contact">Contact</NavLink></li>
      </ul>
  </div>

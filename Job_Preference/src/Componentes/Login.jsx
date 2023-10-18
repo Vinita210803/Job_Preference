@@ -6,7 +6,7 @@ function Login() {
     return (
         <>
              <section className=" signup">
-            <div className="container mt-5">
+            <div className="container ">
                 <div className="signup-content">
                 <div className="signup-image">
                                     <figure>

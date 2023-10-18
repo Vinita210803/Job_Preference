@@ -48,18 +48,7 @@ function Register() {
                     placeholder="Your phone"
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="work">
-                    <i className="zmdi zmdi-slideshow material-icons-name"></i>
-                  </label>
-                  <input
-                    type="text"
-                    name="work"
-                    id="work"
-                    autoComplete="off"
-                    placeholder="Your profession"
-                  />
-                </div>
+                
                 <div className="form-group">
                   <label htmlFor="password">
                     <i className="zmdi zmdi-lock material-icons-name"></i>
