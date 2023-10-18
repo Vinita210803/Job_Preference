@@ -25,7 +25,7 @@ alert( ` My name is ${data.fullname}, phone no is ${data.phone}, my email is ${d
       <form onSubmit={fromSubmit} className='contactform'>
         <div  className="form-group">
           <label for="text">Full Name</label>
-          <input  type="text" className="form-control" id="exampleFormControlTextarea1" required name='fullname'
+          <input   className="form-control" id="exampleFormControlTextarea1" required name='fullname'
           value={data.fullname }
           onChange={InputEvent} aria-describedby="emailHelp" placeholder="Example: Vaibhav Pandey" style={{
             boxSizing: "border-box",
