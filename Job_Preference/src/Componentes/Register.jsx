@@ -2,8 +2,38 @@ import React from "react";
 import { Redirect } from "react-router";
 import signupic from "../Assets/signup.svg";
 import axios from "axios";
+import {Routes, Route, useNavigate} from 'react-router-dom';
 import "../main.css";
+import Verification from "./Verification";
 function Register() {
+  
+  const navigate = useNavigate();
+function userSignup(e) {
+  navigate('/singup/verification');
+  // e.preventDefault();
+  // console.log("jhuhhb");
+  // // --|e|.|preventDefault();
+  // let data = {
+  //   name: document.getElementById("name").value,
+  //   email: document.getElementById("email").value,
+  //   phone: document.getElementById("phone").value,
+  //   work: document.getElementById("work").value,
+  //   password: "pswd",
+  //   cpassword: "pswd",
+  // };
+  // console.log(data);
+  // axios
+  //   .post("http://localhost:3006/register", data)
+  //   .then((res) => {
+  //     alert("User register successful");
+  //     // return <Redirect to='/Login'/>;
+  //   })
+  //   .catch((err) => {
+  //     alert("some error");
+  //   });
+}
+
+
   return (
     <>
       <section className=" signup">
@@ -81,7 +111,9 @@ function Register() {
                     className="form-submit"
                     value="register"
                     onClick={userSignup}
-                  ></input>
+                  >
+                    
+                  </input>
                 </div>
               </form>
             </div>
@@ -97,27 +129,4 @@ function Register() {
   );
 }
 
-function userSignup(e) {
-  e.preventDefault();
-  console.log("jhuhhb");
-  // --|e|.|preventDefault();
-  let data = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value,
-    work: document.getElementById("work").value,
-    password: "pswd",
-    cpassword: "pswd",
-  };
-  console.log(data);
-  axios
-    .post("http://localhost:3006/register", data)
-    .then((res) => {
-      alert("User register successful");
-      // return <Redirect to='/Login'/>;
-    })
-    .catch((err) => {
-      alert("some error");
-    });
-}
 export default Register;

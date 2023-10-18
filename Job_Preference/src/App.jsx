@@ -7,10 +7,11 @@ import Contact from './Componentes/Contact';
 import Navbar from './Componentes/Navbar';
 import User from './Componentes/User.jsx';
 import Footer from "./Componentes/Footer";
-import Singup from "./Componentes/Singup.jsx";
+// import Register from "./Componentes/Register.jsx";
 import Info from './Componentes/Info';
 import Pay from './Componentes/Pay';
-import Login from "./Componentes/Login.jsx";
+import Login from './Componentes/Login';
+import Verification from './Componentes/Verification';
 import {Route, Navigate,Routes} from "react-router-dom";
 import Register from './Componentes/Register';
 const App=()=>{
@@ -25,6 +26,8 @@ const App=()=>{
     <Route exact path = "/login" Component={Login}/>
     <Route exact path = "/singup" Component={Register}/>
     <Route exact path = "/user/:fname" Component={User}/>
+    
+    <Route exact path = "/singup/verification" Component={Verification}/>
     
     
 
