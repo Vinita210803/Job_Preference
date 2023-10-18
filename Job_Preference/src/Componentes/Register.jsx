@@ -62,6 +62,18 @@ async function userSignup(e) {
                     autoComplete="off"
                     placeholder="Your Name"
                     onChange={(e)=>setName(e.target.value)}
+                    style={{
+    boxSizing: "border-box",
+    border: "none",
+    borderBottom: "1px solid #999",
+    borderRadius: "5px",
+    display: "block",
+    
+    width: "100%",
+    fontFamily: "Poppins, sans-serif",
+                      margin: "1px",
+                      padding: "6px 30px",
+                      height: "35px"}}
                   />
                 </div>
                 <div className="form-group">

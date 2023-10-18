@@ -3,7 +3,7 @@ import signupic from "../Assets/login.svg";
 import axios from "axios";
 import "../main.css";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 function Login() {
     const navigate=useNavigate();
   const [email, setEmail] = useState("");
@@ -67,9 +67,9 @@ function Login() {
                   />
                 </div>
                 <div className="form-group">
-                  <i style={{ margin: "0", padding: "10px", color: "#6dabe4" }}>
+                  <NavLink to="/forget" style={{ margin: "0", padding: "10px", color: "#6dabe4" }}>
                     Forgot password?
-                  </i>
+                  </NavLink>
                 </div>
 
                 <div className="form-group from-button">

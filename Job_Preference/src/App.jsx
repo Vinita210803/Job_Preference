@@ -9,6 +9,8 @@ import User from "./Componentes/User.jsx";
 // import Footer from "./Componentes/Footer";
 // import Register from "./Componentes/Register.jsx";
 import Info from "./Componentes/Info";
+import Forget from "./Componentes/Forget";
+import Reset from "./Componentes/Reset";
 import Pay from "./Componentes/Pay";
 import Login from "./Componentes/Login";
 import Verification from "./Componentes/Verification";
@@ -45,6 +47,9 @@ const App = () => {
         <Route exact path="/contact" Component={Contact} />
         <Route exact path="/login" Component={Login} />
         <Route exact path="/singup" Component={Register} />
+        
+        <Route exact path="//reset_password/:id/:token" Component={Reset} />
+        <Route exact path="/forget" Component={Forget} />
         <Route exact path="/user/:fname" Component={User} />
 
         <Route exact path="/singup/verification" Component={Verification} />

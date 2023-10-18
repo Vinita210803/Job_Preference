@@ -27,7 +27,18 @@ alert( ` My name is ${data.fullname}, phone no is ${data.phone}, my email is ${d
           <label for="text">Full Name</label>
           <input  type="text" className="form-control" id="exampleFormControlTextarea1" required name='fullname'
           value={data.fullname }
-          onChange={InputEvent} aria-describedby="emailHelp" placeholder="Example: Vaibhav Pandey" />
+          onChange={InputEvent} aria-describedby="emailHelp" placeholder="Example: Vaibhav Pandey" style={{
+            boxSizing: "border-box",
+            border: "1px solid #dee2e6",
+            // borderBottom: "1px solid #999",
+            borderRadius: "5px",
+            display: "block",
+            
+            width: "100%",
+            fontFamily: "Poppins, sans-serif",
+                              margin: "1px",
+                              padding: "6px 30px",
+                              height: "35px"}}s />
         </div>
         <div className="form-group">
           <label for="exampleFormControlInput1">Phone Number</label>
