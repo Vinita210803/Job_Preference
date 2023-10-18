@@ -1,4 +1,5 @@
 
+import axios from "axios";
 import { useState } from "react";
 import OtpInput from "react-otp-input";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -8,6 +9,12 @@ function Verification() {
 
   const location = useLocation();
   const navigate = useNavigate();
+
+  const verify= async(e)=>{
+    const res=axios.post('http://localhost:8000/verify',{
+      verificationCode:verificationCode
+    })
+  }
   return (
     <div>
        <OtpInput
@@ -20,6 +27,8 @@ function Verification() {
                 boxSizing: "inherit",
               }}
             />
+
+            <button onClick={verify}></button>
     </div>
   )
 }
