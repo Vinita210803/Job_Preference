@@ -70,7 +70,7 @@ module.exports.create = async (req, res) => {
         isVerified: false,
       });
       await newUser.save();
-      let htmlstring = nodemailer.renderTemplate({ user: newUser }, "/otp.ejs");
+     // let htmlstring = nodemailer.renderTemplate({ user: newUser }, "/otp.ejs");
   
       res.send({
         status: true,
