@@ -10,6 +10,8 @@ import User from "./Componentes/User.jsx";
 // import Register from "./Componentes/Register.jsx";
 import Info from "./Componentes/Info";
 import Pay from "./Componentes/Pay";
+import Forget from "./Componentes/Forget";
+import Reset from "./Componentes/Reset";
 import Login from "./Componentes/Login";
 import Verification from "./Componentes/Verification";
 import { Route, Navigate, Routes } from "react-router-dom";
@@ -46,10 +48,10 @@ const App = () => {
         <Route exact path="/login" Component={Login} />
         <Route exact path="/singup" Component={Register} />
         <Route exact path="/user/:fname" Component={User} />
+        <Route path="/reset_password/:id/:token" Component={Reset} />
+        <Route exact path="/user/:fname" Component={User} />
+        <Route exact path="/forget" Component={Forget} />
 
-        <Route exact path="/singup/verification" Component={Verification} />
-
-        <Route path="/" element={<Navigate replace to="/" />} />
       </Routes>
       {/* <Footer></Footer> */}
     </>
