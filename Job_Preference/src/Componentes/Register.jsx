@@ -65,18 +65,7 @@ function userSignup(e) {
                     placeholder="Your email"
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="phone">
-                    <i className="zmdi zmdi-phone-in-talk material-icons-name"></i>
-                  </label>
-                  <input
-                    type="number"
-                    name="phone"
-                    id="phone"
-                    autoComplete="off"
-                    placeholder="Your phone"
-                  />
-                </div>
+               
                 
                 <div className="form-group">
                   <label htmlFor="password">
