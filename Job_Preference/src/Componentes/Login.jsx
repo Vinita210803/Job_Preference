@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import signupic from '../Assets/login.svg'
 import  axios from 'axios';
 import '../main.css';
+import { NavLink } from 'react-router-dom';
 function Login() {
+    
+    const [email,setEmail] = useState(" ");
+    const [password,setPassword] = useState(" ");
     return (
         <>
              <section className=" signup">
@@ -31,7 +35,8 @@ function Login() {
                             <input type="password" name="password" id="password" autoComplete="off" placeholder ="Your password" />
                             </div>
                             <div className="form-group">
-                                <i style={{margin:"0", padding:"10px" , color:"#6dabe4"}}>Forgot password?</i>
+                                <NavLink to="/forget" style={{margin:"0", padding:"10px" , color:"#6dabe4"}}>
+                                Forgot password?</NavLink>
                             </div>
                            
                             <div className="form-group from-button">
@@ -82,7 +87,10 @@ function userSignin(e){
         email:document.getElementById('email').value,
 
         password:'pswd',
-        cpassword:'pswd'
+        cpassword
+        
+        
+        :'pswd'
     }
 console.log(data)
     axios.post('http://localhost:3006/signin',data)
