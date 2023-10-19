@@ -9,8 +9,8 @@ import User from "./Componentes/User.jsx";
 // import Footer from "./Componentes/Footer";
 // import Register from "./Componentes/Register.jsx";
 import Info from "./Componentes/Info";
-import Forget from "./Componentes/Forget";
-import Reset from "./Componentes/Reset";
+
+
 import Pay from "./Componentes/Pay";
 import Forget from "./Componentes/Forget";
 import Reset from "./Componentes/Reset";
@@ -47,15 +47,27 @@ const App = () => {
         )}
 
         <Route exact path="/contact" Component={Contact} />
+
+
+        
+        <Route exact path="/" Component={Home} />
+
+        {token?<>
+          <Route path="/login" element={<Navigate replace to="/" />} />
+        </>:<>
+    
         <Route exact path="/login" Component={Login} />
+        </>
+        
+      }
+      
         <Route exact path="/singup" Component={Register} />
         
-        <Route exact path="//reset_password/:id/:token" Component={Reset} />
+        <Route exact path="/reset_password/:id/:token" Component={Reset} />
         <Route exact path="/forget" Component={Forget} />
         <Route exact path="/user/:fname" Component={User} />
         <Route path="/reset_password/:id/:token" Component={Reset} />
-        <Route exact path="/user/:fname" Component={User} />
-        <Route exact path="/forget" Component={Forget} />
+        <Route exact path="/signup/verification" Component={Verification} />
 
       </Routes>
       {/* <Footer></Footer> */}

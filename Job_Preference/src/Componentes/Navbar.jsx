@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../StyleSheet/NavBar.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const Navbar = () => {
   const navigate=useNavigate();
   const [token,setToken]=useState();
@@ -12,6 +13,7 @@ const Navbar = () => {
 
     await localStorage.removeItem('token')
     navigate('/login')
+  
 
   }
   return (
