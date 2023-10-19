@@ -1,52 +1,73 @@
 import React, { useState } from "react";
-
 import signupic from "../Assets/signup.svg";
-
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "../main.css";
 import axios from "axios";
 import { toast } from "react-toastify";
+
 function Register() {
-  const [name,setName]=useState('');
-  const [password,setPassword]=useState('');
-  const [email,setEmail]=useState('');
-  const [confirmPassword,setConfirmPassword]=useState('');
+
+  
+  const { ethereum } = window;
+  const [address, setAddress] = useState("connect wallet");
+  const [balance, setBalance] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
+  async function checkMetamaskConnection() {
+    if (ethereum) {
+      try {
+        const accounts = await ethereum.enable(); // Prompt the user to connect their Metamask wallet
+        if (accounts.length > 0) {
+          const userAddress = accounts[0];
+          setAddress(userAddress);
 
-async function userSignup(e) {
-    e.preventDefault();
-  try {
-    
-    const res=await axios.post('http://localhost:8000/register',{
-     name,
-     email,
-     password,
-     
-     confirmPassword
-    })
-  console.log(res.data)
-    if(res.data.status===true){
-      toast.success(res.data.message);
-      navigate('/singup/verification',{
-        state:{
-          email:email
+          // You can do more with the user's Ethereum address here
+          // For example, send a transaction, interact with a smart contract, etc.
+
+          // Show a success message and navigate to the next route
+          toast.success("Metamask wallet connected successfully!");
+          navigate("/signup/verification", {
+            state: {
+              email: email,
+              ethereumAddress: userAddress,
+            },
+          });
         }
-      });
-    }else{
-      toast.error(res.data.message)
+      } catch (error) {
+        // Handle errors, e.g., if the user denies the request
+        console.error("Metamask connection error:", error);
+      }
     }
-  } catch (error) {
-    toast.error("error")
   }
-  
-}
 
+  async function userSignup(e) {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:8000/register", {
+        name,
+        email,
+        password,
+        confirmPassword,
+      });
+
+      if (res.data.status === true) {
+        // Prompt the user to connect their Metamask wallet
+        checkMetamaskConnection();
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (error) {
+      toast.error("Error occurred during registration");
+    }
+  }
 
   return (
-    <>
-      <section className=" signup">
-        <div className="container mt-5">
+    <section className="signup">
+     <div className="container mt-5">
           <div className="signup-content">
             <div className="signup-form">
               <h1 className="form-title">Sign up</h1>
@@ -61,19 +82,20 @@ async function userSignup(e) {
                     id="name"
                     autoComplete="off"
                     placeholder="Your Name"
-                    onChange={(e)=>setName(e.target.value)}
+                    onChange={(e) => setName(e.target.value)}
                     style={{
-    boxSizing: "border-box",
-    border: "none",
-    borderBottom: "1px solid #999",
-    borderRadius: "5px",
-    display: "block",
-    
-    width: "100%",
-    fontFamily: "Poppins, sans-serif",
+                      boxSizing: "border-box",
+                      border: "none",
+                      borderBottom: "1px solid #999",
+                      borderRadius: "5px",
+                      display: "block",
+
+                      width: "100%",
+                      fontFamily: "Poppins, sans-serif",
                       margin: "1px",
                       padding: "6px 30px",
-                      height: "35px"}}
+                      height: "35px",
+                    }}
                   />
                 </div>
                 <div className="form-group">
@@ -86,11 +108,10 @@ async function userSignup(e) {
                     id="email"
                     autoComplete="off"
                     placeholder="Your email"
-                    onChange={(e)=>setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
-               
-                
+
                 <div className="form-group">
                   <label htmlFor="password">
                     <i className="zmdi zmdi-lock material-icons-name"></i>
@@ -101,7 +122,7 @@ async function userSignup(e) {
                     id="password"
                     autoComplete="off"
                     placeholder="Your password"
-                    onChange={(e)=>setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -114,8 +135,7 @@ async function userSignup(e) {
                     id="password"
                     autoComplete="off"
                     placeholder="Confirm  Your password"
-
-                    onChange={(e)=>setConfirmPassword(e.target.value)}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                 </div>
                 <div className="form-group from-button">
@@ -126,9 +146,7 @@ async function userSignup(e) {
                     className="form-submit"
                     value="register"
                     onClick={userSignup}
-                  >
-                    
-                  </input>
+                  ></input>
                 </div>
               </form>
             </div>
@@ -139,9 +157,7 @@ async function userSignup(e) {
             </div>
           </div>
         </div>
-      </section>
-    </>
+    </section>
   );
 }
-
 export default Register;
